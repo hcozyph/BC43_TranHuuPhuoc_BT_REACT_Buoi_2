@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import TryGlassesAppOnl from './Component/TryGlassesAppOnline/TryGlassesAppOnl';
 import "./assets/style/index.css";
-import "./assets/data.js/dataGlasses";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>

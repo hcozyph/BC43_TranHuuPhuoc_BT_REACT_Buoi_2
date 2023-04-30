@@ -19,7 +19,7 @@
 .glasses-model {
     width: 300px;
     height: 350px;
-    background-image: url(D:\Cyber_Soft\Bai_Tap\Reactjs_\btreact\public\img\glassesImage\model.jpg);
+    background-image: url(../../../public/img/glassesImage/model.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
