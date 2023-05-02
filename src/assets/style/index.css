@@ -81,3 +81,9 @@
         width: 60px;
     }
 } */
+
+.addToCart {
+    position: absolute;
+    bottom: 110px;
+    right: 5px;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { dataGlasses } from "../../assets/data/data";
+import Cart from "../Cart";
 console.log(dataGlasses);
 export default class TryGlassesAppOnl extends Component {
     state = {
@@ -10,7 +11,23 @@ export default class TryGlassesAppOnl extends Component {
             url: "./glassesImage/v1.png",
             desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
         },
+        arrGioHang: [
+            {
+                id: 1,
+                price: 30,
+                name: "GUCCI G8850U",
+                url: "./glassesImage/v1.png",
+                desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
+                quantity: 1,
+            },
+        ],
     };
+
+    //addToCart
+    addToCart = (itemClick) => {
+        console.log(itemClick);
+    };
+    //End-addToCart
 
     //renderDataGlasses
     renderDataGlasses = () => {
@@ -38,6 +55,7 @@ export default class TryGlassesAppOnl extends Component {
     };
     //End-changeGlasses
 
+    //------FIRSTLY-----//
     render() {
         let { price, name, url, desc } = this.state.glassesDemo;
         return (
@@ -65,17 +83,23 @@ export default class TryGlassesAppOnl extends Component {
                                     id="glasses-selected"
                                     width={"140px"}
                                 />
+                                {/* <button
+                                    className="btn btn-dark text-warning fw-bold border-warning addToCart"
+                                    onClick={this.addToCart()}
+                                >
+                                    ADD TO CART
+                                </button> */}
                             </div>
                             <div className="glasses-model"></div>
                         </div>
                     </div>
                     <div
-                        className="row mx-5 alert alert-light rounded-4 mt-4 mb-0  "
+                        className="row mx-5 alert alert-light rounded-4 mt-4 mb-0"
                         id="glasses-list"
                     >
                         {this.renderDataGlasses()}
                     </div>
-                    <div className="py-lg-4 py-md-3 py-sm-5"></div>
+                    <Cart arrGioHang={this.state.arrGioHang}></Cart>
                 </div>
             </div>
         );
